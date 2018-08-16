@@ -1,3 +1,4 @@
+# change directonary
 def CtoD():
     for node in nuke.selectedNodes():
         if node.Class() == 'Read':
