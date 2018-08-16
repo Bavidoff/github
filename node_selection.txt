@@ -1,0 +1,21 @@
+for node in nuke.selectedNodes():
+    print node.name()
+
+
+
+for node in nuke.selectedNodes():
+    if node.Class() == "Grade":
+        node["black"].setValue(1)
+
+
+		
+		
+		
+nukescripts.clear_selection_recursive() #deselect all nodes
+
+for node in nuke.allNodes(): #go through all nodes
+
+         if node.Class() == 'Blur': #if the node is a grade node...
+                  node.setSelected( True ) #...add it to the selection
+
+print 'Selected %d Grade nodes.' % len(nuke.selectedNodes()) #returns how many grade nodes are selected
